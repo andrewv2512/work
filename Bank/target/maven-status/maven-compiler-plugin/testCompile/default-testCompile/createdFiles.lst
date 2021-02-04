@@ -1,0 +1,5 @@
+com\example\bank\BankControllerTest.class
+com\example\bank\BankServiceTest.class
+com\example\bank\MoneyDeserializerTest.class
+com\example\bank\BankDAOTest.class
+com\example\bank\JdbcConfigTest.class
