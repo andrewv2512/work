@@ -16,7 +16,7 @@ import com.example.bank.model.exceptions.TransactionNotFoundException;
 public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
 	@ExceptionHandler({ClientNotFoundException.class, TransactionNotFoundException.class})
 	public ResponseEntity<ResponseInfo> handleObjectNotFound(
-			ClientNotFoundException exception, 
+			Exception exception, 
 			WebRequest request
 	){
 	    return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ResponseInfo(exception.getMessage()));
