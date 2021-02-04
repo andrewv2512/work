@@ -12,11 +12,9 @@ import com.example.bank.model.ClientTransactionInfo;
 import com.example.bank.model.TransactionBaseInfo;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
 @Repository
 @RequiredArgsConstructor
-@Slf4j
 public class BankDAOBean implements BankDAO {
 	private final JdbcTemplate template;
 	
@@ -62,11 +60,6 @@ public class BankDAOBean implements BankDAO {
 						rs.getBigDecimal("balance"),
 						rs.getObject("action_date", LocalDateTime.class))
 				);
-		
-		for (ClientTransactionInfo c: result) {
-			log.info(c.getActionDate().toString());
-		}
-		
 		
 		return result;
 	}
